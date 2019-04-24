@@ -112,7 +112,7 @@
 <meta property="og:site_name" content="Xavier">
 <meta property="og:description" content="1.1线性表的定义线性表是具有相同数据类型的n个数据元素的有限序列，n为表厂，n=0时，该线性表是空表 2.1顺序表的定义线性表的顺序存储又称顺序表用一组地址连续的存储单元一次存储线性表的数据元素，从而使逻辑上相邻的元素物理位置上也相邻 动态分配结点123456#define InitSize 100typedef struct&amp;#123;			ElemType *data;					int Ma">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-24T15:09:03.960Z">
+<meta property="og:updated_time" content="2019-04-24T15:12:16.826Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构复习之线性表的顺序存储">
 <meta name="twitter:description" content="1.1线性表的定义线性表是具有相同数据类型的n个数据元素的有限序列，n为表厂，n=0时，该线性表是空表 2.1顺序表的定义线性表的顺序存储又称顺序表用一组地址连续的存储单元一次存储线性表的数据元素，从而使逻辑上相邻的元素物理位置上也相邻 动态分配结点123456#define InitSize 100typedef struct&amp;#123;			ElemType *data;					int Ma">
@@ -372,7 +372,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  397字
+                  432字
                 </span>
               
 
@@ -388,7 +388,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1分钟
+                  2分钟
                 </span>
               
             </div>
@@ -412,49 +412,13 @@
         <h2 id="1-1线性表的定义"><a href="#1-1线性表的定义" class="headerlink" title="1.1线性表的定义"></a>1.1线性表的定义</h2><p>线性表是具有相同数据类型的n个数据元素的有限序列，n为表厂，n=0时，该线性表是空表</p>
 <h2 id="2-1顺序表的定义"><a href="#2-1顺序表的定义" class="headerlink" title="2.1顺序表的定义"></a>2.1顺序表的定义</h2><p>线性表的顺序存储又称顺序表用<strong>一组地址连续的存储单元</strong>一次存储线性表的数据元素，从而使逻辑上相邻的元素物理位置上也相邻</p>
 <p>动态分配结点<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#define InitSize 100</span></span><br><span class="line">typedef struct&#123;</span><br><span class="line">			ElemType *data;</span><br><span class="line">					int MaxSize,length;</span><br><span class="line">						</span><br><span class="line">&#125; SeqList;</span><br></pre></td></tr></table></figure></p>
-<p>静态分配结点<br>(<code>`</code>)</p>
-<pre><code>#define MaxSize 50
-typedef struct{
-    ElemType data[MaxSize];
-    int length;
-} SeqList;
-</code></pre><p>(<code>`</code>)</p>
-<h2 id="2-2顺序表上的基本操作"><a href="#2-2顺序表上的基本操作" class="headerlink" title="2.2顺序表上的基本操作"></a>2.2顺序表上的基本操作</h2><p>（1）插入</p>
-<p>(<code>`</code>)<br>    bool ListInsert(SeqList &amp;L, int i, ElemType e){<br>        if(i<1 || l.length+1){ reutrn false; } if(l.length>=MaxSize){<br>            reutrn false;<br>        }<br>        for(int j=L.length;j&gt;=i;j–){<br>            L.data[j]=L.data[j-1];</1></p>
-<pre><code>    }
-    L.data[i-1]=e;
-    L.length++;
-    return true;                            
-}
-</code></pre><p>(<code>`</code>)</p>
+<p>静态分配结点<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">	<span class="comment">#define MaxSize 50</span></span><br><span class="line">	typedef struct&#123;</span><br><span class="line">		ElemType data[MaxSize];</span><br><span class="line">		int length;</span><br><span class="line">	&#125; SeqList;</span><br><span class="line">``` </span><br><span class="line">	</span><br><span class="line"><span class="comment">## 2.2顺序表上的基本操作</span></span><br><span class="line">（1）插入</span><br><span class="line">	</span><br><span class="line">``` bash</span><br><span class="line">	bool ListInsert(SeqList &amp;L, int i, ElemType e)&#123;</span><br><span class="line">		<span class="keyword">if</span>(i&lt;1 || L.length+1)&#123;</span><br><span class="line">			reutrn <span class="literal">false</span>;						</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(L.length&gt;=MaxSize)&#123;</span><br><span class="line">			reutrn <span class="literal">false</span>;						</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(int j=L.length;j&gt;=i;j--)&#123;</span><br><span class="line">			L.data[j]=L.data[j-1];</span><br><span class="line">								</span><br><span class="line">		&#125;</span><br><span class="line">		L.data[i-1]=e;</span><br><span class="line">		L.length++;</span><br><span class="line">		<span class="built_in">return</span> <span class="literal">true</span>;							</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
 <p>时间复杂度为：<br>    在表后还有一个位置，一共是n+1个位置，所以每个位置插入的概率为p=\frac{1}{n=1}<br>    在第i个位置插入结点，需向后移动n-i+1个结点，所以时间复杂度为：<br>    \sum_{i=1}^{n+1}\frac{1}{n+1}{(n-i+1)} =  \frac{1}{n}</p>
 <p>（2）删除</p>
-<p>(<code>)
-    bool ListDelete(SeqList &amp;L, int i, ElemType e){
-        if(i&lt;1 || i&gt;L.length){
-            reutrn false;
-        }
-        e=L.data[i-1];
-        for(int j=i;j&lt;L.length;j++){
-            L.data[j-1]=L.data[j];
-        }
-        L.length--;
-        return true;
-    }
-(</code>)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">bool ListDelete(SeqList &amp;L, int i, ElemType e)&#123;</span><br><span class="line">	<span class="keyword">if</span>(i&lt;1 || i&gt;L.length)&#123;</span><br><span class="line">		reutrn <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	e=L.data[i-1];</span><br><span class="line">	<span class="keyword">for</span>(int j=i;j&lt;L.length;j++)&#123;</span><br><span class="line">		L.data[j-1]=L.data[j];</span><br><span class="line">	&#125;</span><br><span class="line">	L.length--;</span><br><span class="line">	<span class="built_in">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>时间复杂度为：<br>    \sum_{i=1}^{n}\frac{1}{n}{(n-i)} = \frac{n-1}{2}</p>
 <p>（3）按值查找</p>
-<p>(<code>)
-    int LocateElem(SeqList L, ElemType e){
-        int i;
-        for(i=0;i&lt;L.length;i++){
-            if(e==L.data[i]){
-                return i+1;
-            }                    
-        }
-        reutrn 0;                        
-    }
-(</code>)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int LocateElem(SeqList L, ElemType e)&#123;</span><br><span class="line">	int i;</span><br><span class="line">	<span class="keyword">for</span>(i=0;i&lt;L.length;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(e==L.data[i])&#123;</span><br><span class="line">			<span class="built_in">return</span> i+1;</span><br><span class="line">		&#125;					</span><br><span class="line">	&#125;</span><br><span class="line">	reutrn 0;						</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>时间复杂度为：<br>    \sum_{i=1}^{n}\frac{1}{n}{i} = \frac{n+1}{2}</p>
 
       
@@ -629,7 +593,7 @@ typedef struct{
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1线性表的定义"><span class="nav-number">1.</span> <span class="nav-text">1.1线性表的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1顺序表的定义"><span class="nav-number">2.</span> <span class="nav-text">2.1顺序表的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2顺序表上的基本操作"><span class="nav-number">3.</span> <span class="nav-text">2.2顺序表上的基本操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1线性表的定义"><span class="nav-number">1.</span> <span class="nav-text">1.1线性表的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1顺序表的定义"><span class="nav-number">2.</span> <span class="nav-text">2.1顺序表的定义</span></a></li></ol></div>
             
 
           </div>
@@ -670,7 +634,7 @@ typedef struct{
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">943</span>
+    <span title="Site words total count">978</span>
   
 </div>
 
@@ -948,6 +912,8 @@ typedef struct{
   
 
   
+  
+
 
   
 
