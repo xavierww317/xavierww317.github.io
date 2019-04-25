@@ -107,14 +107,14 @@
 
 <meta name="description" content="1.1线性表的定义线性表是具有相同数据类型的n个数据元素的有限序列，n为表厂，n=0时，该线性表是空表 2.1顺序表的定义线性表的顺序存储又称顺序表用一组地址连续的存储单元一次存储线性表的数据元素，从而使逻辑上相邻的元素物理位置上也相邻 动态分配结点12345#define InitSize 100typedef struct&amp;#123;	ElemType *data;	int MaxSize,l">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构复习之线性表的顺序存储">
+<meta property="og:title" content="线性表的顺序存储">
 <meta property="og:url" content="http://yoursite.com/2019/04/24/数据结构复习之线性表的顺序存储/index.html">
 <meta property="og:site_name" content="Xavier">
 <meta property="og:description" content="1.1线性表的定义线性表是具有相同数据类型的n个数据元素的有限序列，n为表厂，n=0时，该线性表是空表 2.1顺序表的定义线性表的顺序存储又称顺序表用一组地址连续的存储单元一次存储线性表的数据元素，从而使逻辑上相邻的元素物理位置上也相邻 动态分配结点12345#define InitSize 100typedef struct&amp;#123;	ElemType *data;	int MaxSize,l">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-24T15:54:06.627Z">
+<meta property="og:updated_time" content="2019-04-25T00:31:42.050Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据结构复习之线性表的顺序存储">
+<meta name="twitter:title" content="线性表的顺序存储">
 <meta name="twitter:description" content="1.1线性表的定义线性表是具有相同数据类型的n个数据元素的有限序列，n为表厂，n=0时，该线性表是空表 2.1顺序表的定义线性表的顺序存储又称顺序表用一组地址连续的存储单元一次存储线性表的数据元素，从而使逻辑上相邻的元素物理位置上也相邻 动态分配结点12345#define InitSize 100typedef struct&amp;#123;	ElemType *data;	int MaxSize,l">
 
 
@@ -151,7 +151,7 @@
 
 
 
-  <title>数据结构复习之线性表的顺序存储 | Xavier</title>
+  <title>线性表的顺序存储 | Xavier</title>
   
 
 
@@ -295,7 +295,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数据结构复习之线性表的顺序存储</h1>
+          <h1 class="post-title" itemprop="name headline">线性表的顺序存储</h1>
         
 
         <div class="post-meta">
@@ -347,7 +347,7 @@
 
           
           
-             <span id="/2019/04/24/数据结构复习之线性表的顺序存储/" class="leancloud_visitors" data-flag-title="数据结构复习之线性表的顺序存储">
+             <span id="/2019/04/24/数据结构复习之线性表的顺序存储/" class="leancloud_visitors" data-flag-title="线性表的顺序存储">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -372,7 +372,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  430字
+                  443字
                 </span>
               
 
@@ -419,6 +419,7 @@
 <p>时间复杂度为：<br>    $$\sum_{i=1}^{n}\frac{1}{n}{(n-i)} = \frac{n-1}{2}$$</p>
 <p>（3）按值查找<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LocateElem</span><span class="params">(SeqList L, ElemType e)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;L.length;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(e==L.data[i])&#123;</span><br><span class="line">			<span class="keyword">return</span> i+<span class="number">1</span>;</span><br><span class="line">		&#125;					</span><br><span class="line">	&#125;</span><br><span class="line">	reutrn <span class="number">0</span>;						</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>时间复杂度为：<br>    $$\sum_{i=1}^{n}\frac{1}{n}{i} = \frac{n+1}{2}$$</p>
+<p><strong>线性表的顺序存储是随机存取</strong></p>
 
       
     </div>
@@ -443,8 +444,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/24/数据结构复习之算法和算法评价/" rel="next" title="数据结构复习之算法和算法评价">
-                <i class="fa fa-chevron-left"></i> 数据结构复习之算法和算法评价
+              <a href="/2019/04/24/数据结构复习之算法和算法评价/" rel="next" title="算法和算法评价">
+                <i class="fa fa-chevron-left"></i> 算法和算法评价
               </a>
             
           </div>
