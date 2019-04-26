@@ -112,7 +112,7 @@
 <meta property="og:site_name" content="Xavier">
 <meta property="og:description" content="线性链表存储结构的特点是用一组任意（连续或不连续）的存储单元存储线性表的数据元素 指针域：存储直接后继存储位置的域数据域存储数据元素信息的域 结点类型描述12345typedef struct LNode&amp;#123;	ElemType data;	Struct LNode *next;			&amp;#125;LNode, *LinkList; 1.1.2头结点的意义（1）使链表的第一个位置上的操作和在表">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-26T02:47:16.227Z">
+<meta property="og:updated_time" content="2019-04-26T02:52:55.851Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性表的链式存储">
 <meta name="twitter:description" content="线性链表存储结构的特点是用一组任意（连续或不连续）的存储单元存储线性表的数据元素 指针域：存储直接后继存储位置的域数据域存储数据元素信息的域 结点类型描述12345typedef struct LNode&amp;#123;	ElemType data;	Struct LNode *next;			&amp;#125;LNode, *LinkList; 1.1.2头结点的意义（1）使链表的第一个位置上的操作和在表">
@@ -372,7 +372,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  215字
+                  269字
                 </span>
               
 
@@ -414,6 +414,7 @@
 <h3 id="结点类型描述"><a href="#结点类型描述" class="headerlink" title="结点类型描述"></a>结点类型描述</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span>&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">	Struct LNode *next;</span><br><span class="line">			</span><br><span class="line">&#125;LNode, *LinkList;</span><br></pre></td></tr></table></figure>
 <h3 id="1-1-2头结点的意义"><a href="#1-1-2头结点的意义" class="headerlink" title="1.1.2头结点的意义"></a>1.1.2头结点的意义</h3><p>（1）使链表的第一个位置上的操作和在表的其他位置上的操作一致<br>（2）无论链表是否为空，其头指针都指向头结点的非空指针，因此空表和非空表的处理一致</p>
 <h2 id="1-2基本操作"><a href="#1-2基本操作" class="headerlink" title="1.2基本操作"></a>1.2基本操作</h2><h3 id="1-2-1头插法"><a href="#1-2-1头插法" class="headerlink" title="1.2.1头插法"></a>1.2.1头插法</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateList</span><span class="params">(LinkList &amp;L, <span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">	L = (LinkList)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LNode));</span><br><span class="line">	L-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">for</span>(i=n,i&gt;<span class="number">0</span>;i--)&#123;</span><br><span class="line">		p = (LinkList)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LNode));</span><br><span class="line">		<span class="built_in">scanf</span>(&amp;p-&gt;data);</span><br><span class="line">		p-&gt;next = L-&gt;next;</span><br><span class="line">		l-&gt;next = p;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-2尾插法"><a href="#1-2-2尾插法" class="headerlink" title="1.2.2尾插法"></a>1.2.2尾插法</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateList</span><span class="params">(LinkList &amp;L, <span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">	L = (LinkList)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LNode));</span><br><span class="line">	L-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">	q = L;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		p = (LinkList)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LNode));</span><br><span class="line">		<span class="built_in">scanf</span>(&amp;p-&gt;data);</span><br><span class="line">		p-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">		q-&gt;next = P;</span><br><span class="line">		q = p;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -587,7 +588,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性链表"><span class="nav-number">1.</span> <span class="nav-text">线性链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#结点类型描述"><span class="nav-number">1.1.</span> <span class="nav-text">结点类型描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2头结点的意义"><span class="nav-number">1.2.</span> <span class="nav-text">1.1.2头结点的意义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2基本操作"><span class="nav-number">2.</span> <span class="nav-text">1.2基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1头插法"><span class="nav-number">2.1.</span> <span class="nav-text">1.2.1头插法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性链表"><span class="nav-number">1.</span> <span class="nav-text">线性链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#结点类型描述"><span class="nav-number">1.1.</span> <span class="nav-text">结点类型描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2头结点的意义"><span class="nav-number">1.2.</span> <span class="nav-text">1.1.2头结点的意义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2基本操作"><span class="nav-number">2.</span> <span class="nav-text">1.2基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1头插法"><span class="nav-number">2.1.</span> <span class="nav-text">1.2.1头插法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2尾插法"><span class="nav-number">2.2.</span> <span class="nav-text">1.2.2尾插法</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -628,7 +629,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.3k</span>
+    <span title="Site words total count">1.4k</span>
   
 </div>
 
