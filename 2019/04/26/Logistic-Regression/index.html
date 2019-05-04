@@ -105,17 +105,17 @@
 
 
 
-<meta name="description" content="1.1什么是逻辑回归逻辑回归模型是广义线性模型的一种，属于线性的分类模型。对于逻辑回归，输入可以使连续的，但输出是离散值，即只有有限个值输出。对于线性可分问题，我们需要找到一条直线，将不同的类别区分开，这个直线又称为超平面：$$Wx + b =0$$W为权重，b为偏置。在多维的情况下，W和b都为向量。 ##1.2阈值函数得到超平面后，将数据分为正负两个类别。此时可以使用阈值函数，将样本映射到不同的">
+<meta name="description" content="1.1什么是逻辑回归逻辑回归模型是广义线性模型的一种，属于线性的分类模型。对于逻辑回归，输入可以使连续的，但输出是离散值，即只有有限个值输出。对于线性可分问题，我们需要找到一条直线，将不同的类别区分开，这个直线又称为超平面：$$Wx + b =0$$W为权重，b为偏置。在多维的情况下，W和b都为向量。 1.2阈值函数得到超平面后，将数据分为正负两个类别。此时可以使用阈值函数，将样本映射到不同的类别">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Logistic Regression">
 <meta property="og:url" content="http://yoursite.com/2019/04/26/Logistic-Regression/index.html">
 <meta property="og:site_name" content="Xavier">
-<meta property="og:description" content="1.1什么是逻辑回归逻辑回归模型是广义线性模型的一种，属于线性的分类模型。对于逻辑回归，输入可以使连续的，但输出是离散值，即只有有限个值输出。对于线性可分问题，我们需要找到一条直线，将不同的类别区分开，这个直线又称为超平面：$$Wx + b =0$$W为权重，b为偏置。在多维的情况下，W和b都为向量。 ##1.2阈值函数得到超平面后，将数据分为正负两个类别。此时可以使用阈值函数，将样本映射到不同的">
+<meta property="og:description" content="1.1什么是逻辑回归逻辑回归模型是广义线性模型的一种，属于线性的分类模型。对于逻辑回归，输入可以使连续的，但输出是离散值，即只有有限个值输出。对于线性可分问题，我们需要找到一条直线，将不同的类别区分开，这个直线又称为超平面：$$Wx + b =0$$W为权重，b为偏置。在多维的情况下，W和b都为向量。 1.2阈值函数得到超平面后，将数据分为正负两个类别。此时可以使用阈值函数，将样本映射到不同的类别">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-04T16:04:55.475Z">
+<meta property="og:updated_time" content="2019-05-04T16:09:45.531Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Logistic Regression">
-<meta name="twitter:description" content="1.1什么是逻辑回归逻辑回归模型是广义线性模型的一种，属于线性的分类模型。对于逻辑回归，输入可以使连续的，但输出是离散值，即只有有限个值输出。对于线性可分问题，我们需要找到一条直线，将不同的类别区分开，这个直线又称为超平面：$$Wx + b =0$$W为权重，b为偏置。在多维的情况下，W和b都为向量。 ##1.2阈值函数得到超平面后，将数据分为正负两个类别。此时可以使用阈值函数，将样本映射到不同的">
+<meta name="twitter:description" content="1.1什么是逻辑回归逻辑回归模型是广义线性模型的一种，属于线性的分类模型。对于逻辑回归，输入可以使连续的，但输出是离散值，即只有有限个值输出。对于线性可分问题，我们需要找到一条直线，将不同的类别区分开，这个直线又称为超平面：$$Wx + b =0$$W为权重，b为偏置。在多维的情况下，W和b都为向量。 1.2阈值函数得到超平面后，将数据分为正负两个类别。此时可以使用阈值函数，将样本映射到不同的类别">
 
 
 
@@ -410,7 +410,7 @@
 
       
         <h2 id="1-1什么是逻辑回归"><a href="#1-1什么是逻辑回归" class="headerlink" title="1.1什么是逻辑回归"></a>1.1什么是逻辑回归</h2><p>逻辑回归模型是广义线性模型的一种，属于线性的分类模型。对于逻辑回归，输入可以使连续的，但输出是离散值，即只有有限个值输出。<br>对于线性可分问题，我们需要找到一条直线，将不同的类别区分开，这个直线又称为超平面：<br>$$Wx + b =0$$<br>W为权重，b为偏置。在多维的情况下，W和b都为向量。</p>
-<p>##1.2阈值函数<br>得到超平面后，将数据分为正负两个类别。此时可以使用阈值函数，将样本映射到不同的类别。常见阈值函数为Sigmoid函数：<br>$$f(x) = \frac{1}{1 + e^-x}$$</p>
+<h2 id="1-2阈值函数"><a href="#1-2阈值函数" class="headerlink" title="1.2阈值函数"></a>1.2阈值函数</h2><p>得到超平面后，将数据分为正负两个类别。此时可以使用阈值函数，将样本映射到不同的类别。常见阈值函数为Sigmoid函数：<br>$$f(x) = \frac{1}{1 + e^-x}$$</p>
 
       
     </div>
@@ -588,7 +588,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1什么是逻辑回归"><span class="nav-number">1.</span> <span class="nav-text">1.1什么是逻辑回归</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1什么是逻辑回归"><span class="nav-number">1.</span> <span class="nav-text">1.1什么是逻辑回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2阈值函数"><span class="nav-number">2.</span> <span class="nav-text">1.2阈值函数</span></a></li></ol></div>
             
 
           </div>
